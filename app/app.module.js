@@ -13,12 +13,21 @@ const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
 const app_component_1 = require('./app.component');
 const navbar_component_1 = require("./components/navbar/navbar.component");
+const jumbotron_component_1 = require("./components/jumbotron/jumbotron.component");
+const home_component_1 = require("./components/Pages/home.component");
+const about_component_1 = require("./components/Pages/about.component");
+const app_routes_1 = require("./app.routes");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent],
+        imports: [platform_browser_1.BrowserModule, app_routes_1.AppRoutingModule],
+        declarations: [app_component_1.AppComponent,
+            navbar_component_1.NavbarComponent,
+            jumbotron_component_1.JumbotronComponent,
+            home_component_1.HomeComponent,
+            about_component_1.AboutComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     }), 
     __metadata('design:paramtypes', [])
